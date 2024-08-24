@@ -15,12 +15,23 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - label: "index"
+      - label: "Trang chủ"
         name: "index"
         file: "index.html"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Tiêu đề", name: "title", widget: "string" }
+          - { label: "Giới Thiệu", name: "about", widget: "text" }
+          - { label: "Địa Điểm Tham Quan", name: "attractions", widget: "list", fields: [
+              { label: "Tên Địa Điểm", name: "name", widget: "string" },
+              { label: "Mô Tả", name: "description", widget: "text" },
+              { label: "Hình Ảnh", name: "image", widget: "image" }
+            ]
+          }
+          - { label: "Thư Viện Ảnh", name: "gallery", widget: "list", fields: [
+              { label: "Hình Ảnh", name: "image", widget: "image" }
+            ]
+          }
+          - { label: "Liên Hệ", name: "contact", widget: "text" }
 
   - name: "images"
     label: "Images"
