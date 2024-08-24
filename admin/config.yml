@@ -1,20 +1,35 @@
 backend:
-  name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+  name: git-gateway # Bạn có thể thay đổi sang "github" nếu dùng GitHub
+  branch: master # Nhánh chính của bạn
 
-media_folder: "images/uploads" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/images/uploads"
+media_folder: "images" # Thư mục chứa hình ảnh upload bởi Decap CMS
+public_folder: "/images" # Đường dẫn công khai cho các hình ảnh
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "" # Để trống để lưu tài liệu ở thư mục gốc
+  - name: "pages" # Tên bộ sưu tập
+    label: "Pages" # Nhãn hiển thị
+    files:
+      - label: "Home Page" # Trang chủ
+        name: "home"
+        file: "index.html" # Đường dẫn tới tệp
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "images"
+    label: "Images"
+    folder: "images" # Thư mục chứa hình ảnh
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Tạo tên file theo định dạng YYYY-MM-DD-title.md
+    slug: "{{slug}}"
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
-      - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Description", name: "description", widget: "string" }
+
+  - name: "styles"
+    label: "Styles"
+    files:
+      - label: "Main Stylesheet"
+        name: "styles"
+        file: "static/styles.css"
+        fields:
+          - { label: "CSS Content", name: "content", widget: "code", code_mode: "css" }
