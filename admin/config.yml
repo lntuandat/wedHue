@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway # Bạn có thể thay đổi sang "github" nếu dùng GitHub
+  name: github # Bạn có thể thay đổi sang "github" nếu dùng GitHub
   branch: master # Nhánh chính của bạn
   repo: lntuandat/wedHue
 
