@@ -4,7 +4,7 @@ backend:
   branch: master
   auth_scope: repo
   app_id: "Ov23li6DYEU120Wr0rSn"
-  base_url: https://api.netlify.com
+  base_url: "https://api.github.com"
   auth_endpoint: auth
   cms_label_prefix: Content Manager
 
@@ -47,6 +47,6 @@ collections:
     files:
       - label: "Main Stylesheet"
         name: "styles"
-        file: "static/styles.css"
+        file: "/static/styles.css"
         fields:
           - { label: "CSS Content", name: "content", widget: "code", code_mode: "css" }
