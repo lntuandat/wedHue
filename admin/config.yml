@@ -2,8 +2,6 @@ backend:
   name: github
   repo: lntuandat/wedHue
   branch: master
-  auth_scope: repo
-  app_id: "Ov23li6DYEU120Wr0rSn"
 
 media_folder: "images"
 public_folder: "/images"
@@ -36,8 +34,8 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Image", name: "image", widget: "image" }
-      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Hình Ảnh", name: "image", widget: "image" }
+      - { label: "Mô Tả", name: "description", widget: "string" }
 
   - name: "styles"
     label: "Styles"
