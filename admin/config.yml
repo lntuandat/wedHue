@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: lntuandat/wedHue
-  branch: mastẻ
+  branch: master
   auth_scope: repo
   app_id: "Ov23li6DYEU120Wr0rSn"
   base_url: https://api.netlify.com
