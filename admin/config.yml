@@ -10,8 +10,8 @@ collections:
   - name: "pages" # Tên bộ sưu tập
     label: "Pages" # Nhãn hiển thị
     files:
-      - label: "Home Page" # Trang chủ
-        name: "home"
+      - label: "index" # Trang chủ
+        name: "index"
         file: "index.html" # Đường dẫn tới tệp
         fields:
           - { label: "Title", name: "title", widget: "string" }
