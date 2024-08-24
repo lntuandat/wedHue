@@ -3,29 +3,28 @@ backend:
   repo: lntuandat/wedHue
   branch: master
   auth_scope: repo
-  app_id: Ov23li6DYEU120Wr0rSn
+  app_id: "Ov23li6DYEU120Wr0rSn"
   base_url: https://api.netlify.com
   auth_endpoint: auth
   cms_label_prefix: Content Manager
 
-
-media_folder: "images" # Thư mục chứa hình ảnh upload bởi Decap CMS
-public_folder: "/images" # Đường dẫn công khai cho các hình ảnh
+media_folder: "images"
+public_folder: "/images"
 
 collections:
-  - name: "pages" # Tên bộ sưu tập
-    label: "Pages" # Nhãn hiển thị
+  - name: "pages"
+    label: "Pages"
     files:
-      - label: "index" # Trang chủ
+      - label: "index"
         name: "index"
-        file: "index.html" # Đường dẫn tới tệp
+        file: "index.html"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "images"
     label: "Images"
-    folder: "images" # Thư mục chứa hình ảnh
+    folder: "images"
     create: true
     slug: "{{slug}}"
     fields:
