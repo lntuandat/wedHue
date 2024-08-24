@@ -41,6 +41,58 @@ collections:
     fields:
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Description", name: "description", widget: "string" }
+backend:
+  name: github
+  repo: lntuandat/wedHue
+  branch: master
+  auth_scope: repo
+  app_id: "Ov23li6DYEU120Wr0rSn"
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+  cms_label_prefix: Content Manager
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Trang chủ"
+        name: "index"
+        file: "index.html"
+        fields:
+          - { label: "Tiêu đề", name: "title", widget: "string" }
+          - { label: "Giới Thiệu", name: "about", widget: "text" }
+          - { label: "Địa Điểm Tham Quan", name: "attractions", widget: "list", fields: [
+              { label: "Tên Địa Điểm", name: "name", widget: "string" },
+              { label: "Mô Tả", name: "description", widget: "text" },
+              { label: "Hình Ảnh", name: "image", widget: "image" }
+            ]
+          }
+          - { label: "Thư Viện Ảnh", name: "gallery", widget: "list", fields: [
+              { label: "Hình Ảnh", name: "image", widget: "image" }
+            ]
+          }
+          - { label: "Liên Hệ", name: "contact", widget: "text" }
+
+  - name: "images"
+    label: "Images"
+    folder: "images"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Description", name: "description", widget: "string" }
+
+  - name: "styles"
+    label: "Styles"
+    files:
+      - label: "Main Stylesheet"
+        name: "styles"
+        file: "static/styles.css"
+        fields:
+          - { label: "CSS Content", name: "content", widget: "code", code_mode: "css" }
 
   - name: "styles"
     label: "Styles"
