@@ -4,7 +4,7 @@ backend:
   branch: master
   auth_scope: repo
   app_id: "Ov23li6DYEU120Wr0rSn"
-  base_url: "https://api.github.com"
+  base_url: https://api.github.com
   auth_endpoint: auth
   cms_label_prefix: Content Manager
 
