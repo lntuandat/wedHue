@@ -3,7 +3,7 @@ backend:
   repo: lntuandat/wedHue
   branch: master
   auth_scope: repo
-  app_id: "Ov23li6DYEU120Wr0rSn"
+  app_id: Ov23li6DYEU120Wr0rSn
   base_url: https://api.netlify.com
   auth_endpoint: auth
   cms_label_prefix: Content Manager
