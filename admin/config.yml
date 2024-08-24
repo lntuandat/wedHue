@@ -1,7 +1,13 @@
 backend:
-  name: github # Bạn có thể thay đổi sang "github" nếu dùng GitHub
-  branch: master # Nhánh chính của bạn
+  name: github
   repo: lntuandat/wedHue
+  branch: mastẻ
+  auth_scope: repo
+  app_id: "Ov23li6DYEU120Wr0rSn"
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+  cms_label_prefix: Content Manager
+
 
 media_folder: "images" # Thư mục chứa hình ảnh upload bởi Decap CMS
 public_folder: "/images" # Đường dẫn công khai cho các hình ảnh
